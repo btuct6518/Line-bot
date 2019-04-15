@@ -47,7 +47,7 @@ def handle_message(event):
     elif '瑋杰' in msg:
         r = '你是想說瑋杰非常有天分嗎?'
 
-    line_bot_api.reply_message(s
+    line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
 
