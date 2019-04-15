@@ -39,12 +39,14 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     r = '很抱歉，我不懂你說甚麼'
+
     if msg in [hi, Hi]:
         r = '嗨'
     elif msg == '玉婕是笨蛋':
         r = '您真是聰明'
     elif '瑋杰' in msg:
         r = '你是想說瑋杰非常有天分嗎?'
+        
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
